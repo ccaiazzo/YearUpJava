@@ -1,6 +1,6 @@
 package com.yearup.week2.homework;
 
-public class SolarSystem extends Planet {
+public class SolarSystemPlanet extends Planet {
     private String star = "SUN";
 
     @Override
@@ -26,6 +26,8 @@ public class SolarSystem extends Planet {
                 return 7;
             case "Neptune":
                 return 8;
+            default:
+                return 0;
         }
     }
 }

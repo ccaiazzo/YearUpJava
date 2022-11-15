@@ -8,6 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class HomeWorkTest {
 
     @Test
+    public void generateTable_whenNIsProvided_printsTable(){
+
+    }
+
+    @Test
     public void reverseString_whenEmpty_returnsEmpty(){
         String input = "";
         char[] out = HomeWork.reverseString("");

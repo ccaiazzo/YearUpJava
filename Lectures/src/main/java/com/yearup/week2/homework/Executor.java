@@ -53,7 +53,7 @@ public class Executor {
                 System.out.println("Thanks for using our planet application. Goodbye!");
             }
         } while(doAgain);
-**/ CelestialObjectAnonymousClass.checkMoons();;
+**/ CelestialObjectAnonymousClass.checkMoons();
     }
 
     public static class CelestialObjectAnonymousClass implements week2.src.com.yearup.week2.homework.CelestialObject {
@@ -70,43 +70,51 @@ public class Executor {
         }
 
         enum PlanetName {
-            Mercury,
-            Venus,
-            Earth,
-            Mars,
-            Jupiter,
-            Saturn,
-            Uranus,
-            Neptune
+            MERCURY,
+            VENUS,
+            EARTH,
+            MARS,
+            JUPITER,
+            SATURN,
+            URANUS,
+            NEPTUNE
         }
 
         public static int displayMoons(String planetName) {
-            switch(planetName) {
-                case Mercury:
-                case Venus:
-                    return 0;
-                case Earth:
-                    return 1;
-                case Mars:
-                    return 2;
-                case Jupiter:
-                    return 80;
-                case Saturn:
-                    return 83;
-                case Uranus:
-                    return 27;
-                case Neptune:
-                    return 14;
-                default:
-                    return -1;
-
+            if (planetName.equalsIgnoreCase(PlanetName.MERCURY.name())) {
+                return 0;
+            }
+            else if (planetName.equalsIgnoreCase(PlanetName.VENUS.name())) {
+                return 0;
+            }
+            else if (planetName.equalsIgnoreCase(PlanetName.EARTH.name())) {
+                return 1;
+            }
+            else if (planetName.equalsIgnoreCase(PlanetName.MARS.name())) {
+                return 2;
+            }
+            else if (planetName.equalsIgnoreCase(PlanetName.JUPITER.name())) {
+                return 80;
+            }
+            else if (planetName.equalsIgnoreCase(PlanetName.SATURN.name())) {
+                return 83;
+            }
+            else if (planetName.equalsIgnoreCase(PlanetName.URANUS.name())) {
+                return 27;
+            }
+            else if (planetName.equalsIgnoreCase(PlanetName.NEPTUNE.name())) {
+                return 14;
+            }
+            else {
+                System.out.println("Please enter a valid planet name.");
+                return -1;
             }
         }
 
         public static void checkMoons() {
             Scanner input = new Scanner(System.in);
             System.out.print("Please enter a planet name: ");
-            displayMoons(input.nextLine());
+            System.out.print("Number of moons is " + displayMoons(input.nextLine()));
         }
 
 
